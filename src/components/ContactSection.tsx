@@ -42,18 +42,18 @@ export default function ContactSection() {
   const contactInfo = [
     {
       icon: Mail,
-      text: "hello@example.com",
-      href: "mailto:hello@example.com",
+      text: "bhanuchiru619@gmail.com",
+      href: "mailto:bhanuchiru619@gmail.com",
     },
     {
       icon: Github,
-      text: "github.com/username",
-      href: "https://github.com",
+      text: "github.com/BhanuSankarasetty",
+      href: "https://github.com/BhanuSankarasetty",
     },
     {
       icon: Linkedin,
-      text: "linkedin.com/in/username",
-      href: "https://linkedin.com",
+      text: "linkedin.com/in/bhanumurari/",
+      href: "https://www.linkedin.com/in/bhanumurari/",
     },
   ];
 

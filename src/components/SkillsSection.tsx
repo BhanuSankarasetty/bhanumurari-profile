@@ -10,7 +10,7 @@ const skillGroups = [
       { name: "TypeScript", proficiency: 85, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
       { name: "Next.js", proficiency: 80, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
       { name: "Tailwind CSS", proficiency: 95, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" },
-      { name: "Redux", proficiency: 75, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" },
+
     ],
   },
   {
@@ -29,7 +29,6 @@ const skillGroups = [
       { name: "Git", proficiency: 90, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
       { name: "Docker", proficiency: 70, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
       { name: "AWS", proficiency: 65, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" },
-      { name: "Jest", proficiency: 75, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" },
       { name: "CI/CD", proficiency: 80, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" },
     ],
   },
@@ -81,10 +80,10 @@ export default function SkillsSection() {
         >
           <h3 className="text-2xl font-semibold mb-6">Technical Expertise</h3>
           <p className="text-lg mb-6">
-            I've worked with a wide range of technologies in the web development world. Here's an overview of my technical skills and proficiency levels.
+          I've spent years honing my skills across a wide range of technologies in the web development world. Here's an overview of my technical expertise and proficiency levels.
           </p>
           <p className="text-muted-foreground mb-8">
-            I'm always expanding my skill set and exploring new technologies to stay at the cutting edge of web development.
+          I'm constantly expanding my skill set and exploring new technologies to stay at the cutting edge of development.
           </p>
         </motion.div>
 
@@ -151,8 +150,7 @@ export default function SkillsSection() {
       >
         {[
           "JavaScript", "TypeScript", "React.js", "Next.js", "Node.js", "Express",
-          "MongoDB", "PostgreSQL", "GraphQL", "REST API", "Redux", "Tailwind CSS",
-          "Jest", "Git", "Docker", "AWS"
+          "MongoDB", "PostgreSQL", "GraphQL", "REST API", "Tailwind CSS", "Git", "Docker", "AWS"
         ].map((skill, index) => {
           // Use our skillIconMap to get the correct icon URL
           const iconUrl = skillIconMap[skill] || "";

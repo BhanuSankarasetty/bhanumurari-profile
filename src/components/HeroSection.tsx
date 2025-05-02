@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { Button } from "./ui/button";
 import { ArrowDown, Download, Github, Linkedin, Mail, Code } from "lucide-react";
-
+import profile from "../components/images/Profile.jpeg";
+import res from "../components/Resume/resume.pdf";
 export default function HeroSection() {
   return (
     <section
@@ -26,7 +27,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Bhanu Murari
+            Sankarasetty Bhanu Murari
           </motion.h1>
           <motion.div
             className="text-2xl md:text-3xl mb-6 font-medium"
@@ -36,11 +37,11 @@ export default function HeroSection() {
           >
             <TypeAnimation
               sequence={[
+                "Software Developer Engineer",
+                1000,
+                "Devops Enthusiast",
+                1000,
                 "Full Stack Developer",
-                1000,
-                "React Specialist",
-                1000,
-                "UI/UX Enthusiast",
                 1000,
               ]}
               wrapper="span"
@@ -54,8 +55,8 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            I build exceptional and accessible digital experiences for the web.
-            Focused on creating elegant solutions to complex problems.
+            I create beautiful, functional, and user-friendly digital experiences and solutions
+             that help businesses grow and succeed in the digital world.
           </motion.p>
           <motion.div
             className="flex flex-wrap gap-4 mb-8"
@@ -67,7 +68,7 @@ export default function HeroSection() {
               <a href="#contact">Get In Touch</a>
             </Button>
             <Button variant="outline" size="lg" asChild>
-              <a href="/resume.pdf" download>
+              <a href= {res} download>
                 <Download size={18} className="mr-2" />
                 Download Resume
               </a>
@@ -80,7 +81,7 @@ export default function HeroSection() {
             transition={{ duration: 0.5, delay: 1 }}
           >
             <a
-              href="https://github.com"
+              href="https://github.com/BhanuSankarasetty"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"
@@ -89,7 +90,7 @@ export default function HeroSection() {
               <Github size={24} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://linkedin.com/in/bhanumurari"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"
@@ -98,14 +99,14 @@ export default function HeroSection() {
               <Linkedin size={24} />
             </a>
             <a
-              href="mailto:hello@example.com"
+              href="mailto:bhanuchiru619@gmai.com"
               className="text-muted-foreground hover:text-foreground transition-colors"
               aria-label="Email"
             >
               <Mail size={24} />
             </a>
             <a
-              href="https://leetcode.com"
+              href="https://leetcode.com/u/BhanuMurari/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"
@@ -122,9 +123,9 @@ export default function HeroSection() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            <div className="w-full h-full bg-gradient-to-br from-primary/80 to-accent/80 flex items-center justify-center text-white text-7xl font-bold">
-              BM
-            </div>
+            <img src= {profile} className="w-full h-full bg-gradient-to-br from-primary/80 to-accent/80 flex items-center justify-center text-white text-7xl font-bold"/>
+     
+            
           </motion.div>
         </div>
       </div>

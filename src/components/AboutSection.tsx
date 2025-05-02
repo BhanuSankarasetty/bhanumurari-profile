@@ -6,17 +6,17 @@ import { Award, Calendar, Code } from "lucide-react";
 const stats = [
   {
     label: "Years Experience",
-    value: "5+",
+    value: "3+ Years of Experience (B.Tech CSE)",
     icon: Calendar,
   },
   {
     label: "Projects Completed",
-    value: "20+",
+    value: "4+",
     icon: Code,
   },
   {
-    label: "Awards Won",
-    value: "3",
+    label: "DSA Practice",
+    value: "400+ Problems Solved",
     icon: Award,
   },
 ];
@@ -43,7 +43,7 @@ export default function AboutSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            I'm a passionate Full Stack Developer with 5+ years of experience building exceptional digital experiences. I specialize in creating innovative web applications that are not only visually appealing but also high-performing and user-friendly.
+            Aspiring Software Development Engineer with a Vision to Build AI-Driven Systems and solutions that Solve Real-World Problems
           </motion.p>
           <motion.p
             className="text-lg mb-6"
@@ -52,7 +52,7 @@ export default function AboutSection() {
             transition={{ duration: 0.5, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            With a strong foundation in both front-end and back-end technologies, I'm committed to writing clean, efficient code and constantly expanding my skill set to keep up with the ever-evolving tech landscape.
+           Driven by a deep passion for technology and problem-solving, I’m currently pursuing B.Tech in Computer Science Engineering and actively building the skills required to thrive as an SDE. My background in Mining Engineering gave me a unique perspective on large-scale systems, safety, and optimization—which I now combine with my love for coding and data structures. I’m especially interested in leveraging AI to build impactful systems—like my current project: an AI-powered crowd monitoring and alert system to prevent stampedes in high-density areas across India. I’m also building a DevOps-enabled food delivery platform that empowers home cooks through tech.
           </motion.p>
           <motion.p
             className="text-lg"
@@ -61,7 +61,7 @@ export default function AboutSection() {
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            Outside of coding, I enjoy hiking, reading sci-fi novels, and contributing to open-source projects. I'm always looking for new challenges and opportunities to grow as a developer.
+            With a strong grasp of C++, DSA (400+ LeetCode problems), and hands-on experience in full-stack development using React.js, Node.js, and MongoDB, I’m now expanding into system design, Docker, Terraform, Jenkins, and AWS. My goal is to join a top tech company (FAANG/MNC) and contribute to scalable, intelligent, and secure digital ecosystems. When I'm not coding, you’ll find me dominating a chessboard, debating ideas, or reflecting on how tech can uplift lives in meaningful ways.
           </motion.p>
         </div>
 
@@ -70,25 +70,25 @@ export default function AboutSection() {
           <div className="space-y-12 relative before:absolute before:inset-0 before:left-6 before:h-full before:w-[1px] before:bg-border">
             {[
               {
-                year: "2023 - Present",
-                company: "Tech Innovate",
-                role: "Senior Full Stack Developer",
+                year: "2024 - Present",
+                company: "Personal Project Based",
+                role: "Full Stack Developer Intern",
                 description:
-                  "Leading development of enterprise-grade web applications using React, Node.js, and AWS.",
+                  "Designing and developing a full-stack application to connect users with verified home cooks",
               },
               {
-                year: "2020 - 2023",
-                company: "WebSolutions Inc.",
-                role: "Full Stack Developer",
+                year: "2023 – Present",
+                company: "DSA & Problem-Solving Learner",
+                role: "Problem solving",
                 description:
-                  "Developed and maintained multiple client projects using modern JavaScript frameworks.",
+                  "Strong in C++, focused on mastering algorithms, data structures, and competitive coding techniques",
               },
               {
-                year: "2018 - 2020",
-                company: "Digital Creations",
-                role: "Front-end Developer",
+                year: "2023 – 2025",
+                company: " Nxt-Wave",
+                role: "Frontend Developer Trainee",
                 description:
-                  "Created responsive and accessible user interfaces for various client websites.",
+                  "Built interactive web interfaces using HTML, CSS, and JavaScript. Learned project structure, component design, state management, and API integration",
               },
             ].map((item, index) => (
               <motion.div

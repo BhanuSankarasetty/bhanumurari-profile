@@ -5,7 +5,10 @@ import SectionWrapper from "./SectionWrapper";
 import { Button } from "./ui/button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "./ui/dialog";
 import { ExternalLink, Github, X } from "lucide-react";
-
+import br from "../components/images/BR.png";
+import hfd from "../components/images/HFD.png";
+import r from "../components/images/R.jpg";
+import temp from "../components/images/Temp.jpg";
 interface Project {
   id: number;
   title: string;
@@ -21,63 +24,43 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-featured online shopping platform with cart, payment integration, and admin dashboard.",
-    longDescription: "This e-commerce platform offers a complete online shopping experience with product browsing, cart functionality, secure checkout with Stripe integration, user accounts, order history, and a comprehensive admin dashboard for inventory management.",
-    image: "https://placehold.co/600x400/6D28D9/FFFFFF?text=E-Commerce+App",
-    tags: ["React", "Node.js", "MongoDB", "Stripe", "Redux"],
-    liveUrl: "https://example.com",
-    repoUrl: "https://github.com",
+    title: "Bachelor's Recipe",
+    description: "A sleek web app that provides detailed recipes and cooking instructions to help users prepare delicious meals with ease.",
+    longDescription: "A Sleek Web App for Effortless Cooking:This modern and user-friendly web application is designed to make home cooking simple, enjoyable, and accessible to everyone—from beginners to seasoned cooks. The platform offers a curated collection of detailed recipes, each with step-by-step cooking instructions, ingredient lists, preparation times, and visual guides. Whether you're looking to cook a quick weekday meal or explore gourmet dishes, the app helps you plan, prep, and perfect your meals with ease.Built using cutting-edge web technologies like React.js and Tailwind CSS, the app ensures a responsive and intuitive interface that works seamlessly across devices. Users can search by ingredients, cuisine, difficulty level, or dietary preferences, making meal planning effortless. With features like recipe bookmarking, user reviews, and dynamic serving size adjustments, it empowers users to cook confidently and creatively in their own kitchens.",
+    image: br,
+    tags: ["EJS", "Node.js", "MongoDB", "Express.js"],
+    liveUrl: "https://bachelors-recipe.onrender.com/",
+    repoUrl: "https://github.com/BhanuSankarasetty/kitchen-kismet-kart",
     featured: true,
   },
   {
     id: 2,
-    title: "Task Management App",
-    description: "A collaborative project management tool with drag-and-drop tasks, teams, and real-time updates.",
-    longDescription: "This task management application enables teams to organize projects using Kanban boards with drag-and-drop functionality. It includes features like task assignment, due dates, comments, file attachments, and real-time updates via WebSockets.",
-    image: "https://placehold.co/600x400/14B8A6/FFFFFF?text=Task+Manager",
-    tags: ["Next.js", "TypeScript", "PostgreSQL", "Socket.io"],
-    liveUrl: "https://example.com",
+    title: "PlateFul",
+    description: "A home food delivery platform connecting users with local chefs, offering fresh, homemade meals while empowering cooks with digital visibility.",
+    longDescription: "Empowering Home Cooks, One Delicious Meal at a Time Our platform is a community-driven home food delivery application that bridges the gap between food lovers and local culinary talent. Designed to connect users with verified home chefs, the app offers a unique dining experience built on authenticity, freshness, and human connection. Every meal is homemade with care, giving users an alternative to commercial fast food while providing talented cooks—especially women and small-scale entrepreneurs—with the digital visibility and tools they need to succeed. Through a seamless web and mobile interface, users can browse chef portfolios, explore regional and seasonal dishes, place customized orders, and leave feedback after each meal. For chefs, the platform offers a space to showcase their cooking skills, manage orders, and grow a loyal customer base—all while working from the comfort of their homes. Built with modern technologies like React.js, Node.js, MongoDB, Docker, and AWS, the platform is secure, scalable, and user-friendly.",
+    image: hfd,
+    tags: ["Node.js", "Firebase", "Tailwind CSS", "React.js","Html","CSS","Jave Scipt","Mongo DB"],
+    liveUrl: "https://platefulfood.vercel.app/",
     repoUrl: "https://github.com",
     featured: true,
   },
   {
     id: 3,
-    title: "Fitness Tracking App",
-    description: "A mobile-responsive web app for tracking workouts, nutrition, and fitness goals.",
-    longDescription: "This fitness tracking application allows users to log workouts, track nutrition intake, set personal goals, and visualize progress through interactive charts. It includes features like workout plans, calorie counting, and social sharing.",
-    image: "https://placehold.co/600x400/6D28D9/FFFFFF?text=Fitness+Tracker",
-    tags: ["React", "Firebase", "Chart.js", "Tailwind CSS"],
-    liveUrl: "https://example.com",
-    repoUrl: "https://github.com",
+    title: "Rental Finder",
+    description: "A smart rental platform that connects property owners and tenants, simplifying listings, bookings, and communication with a seamless digital experience.",
+    longDescription: "Smarter Rentals, Seamless Experience This smart rental platform reimagines property renting by connecting owners and tenants through a streamlined digital experience. From property listings to bookings and secure communication, every step is made simple, transparent, and efficient. Owners can easily list properties with photos, pricing, and availability, while tenants can search, filter, and book rentals confidently. Features like real-time availability, online payments, and tenant verification make the process smooth and trustworthy. Built with modern tech (React.js, Node.js, MongoDB, AWS), the platform is fast, scalable, and responsive across all devices—making renting or leasing easier than ever for everyone involved.",
+    image: r,
+    tags: ["React Native", "CSS", "HTML", "TypeScript"],
+    liveUrl: "https://rental-platform-one.vercel.app/",
+    repoUrl: "https://github.com/BhanuSankarasetty/vibrant-rentals-platform",
   },
   {
     id: 4,
-    title: "Weather Dashboard",
-    description: "A weather application with forecasts, interactive maps, and location-based alerts.",
-    longDescription: "This weather dashboard provides current conditions and forecasts with interactive visualizations. It includes features like location search, saved locations, hourly and 7-day forecasts, weather maps, and severe weather alerts.",
-    image: "https://placehold.co/600x400/14B8A6/FFFFFF?text=Weather+App",
-    tags: ["React", "OpenWeather API", "Mapbox", "Recharts"],
-    liveUrl: "https://example.com",
-    repoUrl: "https://github.com",
-  },
-  {
-    id: 5,
-    title: "Social Media Dashboard",
-    description: "An analytics dashboard for tracking social media engagement across multiple platforms.",
-    longDescription: "This social media dashboard aggregates data from multiple platforms to provide comprehensive analytics. It includes follower growth tracking, engagement metrics, post scheduling, and content performance analysis with detailed reports.",
-    image: "https://placehold.co/600x400/6D28D9/FFFFFF?text=Social+Dashboard",
-    tags: ["Vue.js", "Express", "MongoDB", "Chart.js"],
-    liveUrl: "https://example.com",
-    repoUrl: "https://github.com",
-  },
-  {
-    id: 6,
-    title: "Recipe Sharing Platform",
-    description: "A community-driven recipe sharing app with search, favorites, and user reviews.",
-    longDescription: "This recipe sharing platform enables users to discover, save, and share recipes. It includes features like ingredient-based search, step-by-step instructions, nutritional information, user reviews, and personalized recommendations.",
-    image: "https://placehold.co/600x400/14B8A6/FFFFFF?text=Recipe+App",
-    tags: ["React Native", "Firebase", "Redux", "Algolia"],
+    title: "Weather Forecast App",
+    description: "A clean, intuitive weather app with 7-day forecasts, location-based data, and severe weather alerts.",
+    longDescription: "This weather App provides current conditions and forecasts with interactive visualizations. It includes features like location search, saved locations, hourly and 7-day forecasts, weather maps, and severe weather alerts.",
+    image: temp,
+    tags: ["React", "OpenWeather API", "Styled Components", "PWA"],
     liveUrl: "https://example.com",
     repoUrl: "https://github.com",
   },
@@ -108,8 +91,7 @@ export default function ProjectsSection() {
         transition={{ duration: 0.5, delay: 0.2 }}
         viewport={{ once: true }}
       >
-        Here are some of my recent projects. Each one represents unique challenges and solutions,
-        showcasing different aspects of my technical skills and creativity.
+       Here are some of my recent projects. Each one presented unique challenges and opportunities to learn and grow as a developer.
       </motion.p>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
