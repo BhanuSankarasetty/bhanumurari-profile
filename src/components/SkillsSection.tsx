@@ -40,6 +40,7 @@ const skillIconMap = {
   "JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
   "TypeScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
   "React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  "React.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
   "Next.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
   "Node.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
   "Express": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
@@ -48,6 +49,7 @@ const skillIconMap = {
   "GraphQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
   "Redux": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
   "Tailwind": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+  "Tailwind CSS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
   "Jest": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg",
   "Git": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
   "Docker": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
@@ -111,6 +113,9 @@ export default function SkillsSection() {
                             src={skill.icon} 
                             alt={`${skill.name} icon`} 
                             className="w-6 h-6 object-contain"
+                            onError={(e) => {
+                              e.currentTarget.src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg";
+                            }}
                           />
                           <span className="font-medium">{skill.name}</span>
                         </div>
@@ -145,8 +150,8 @@ export default function SkillsSection() {
         viewport={{ once: true }}
       >
         {[
-          "JavaScript", "TypeScript", "React", "Next.js", "Node.js", "Express",
-          "MongoDB", "PostgreSQL", "GraphQL", "REST API", "Redux", "Tailwind",
+          "JavaScript", "TypeScript", "React.js", "Next.js", "Node.js", "Express",
+          "MongoDB", "PostgreSQL", "GraphQL", "REST API", "Redux", "Tailwind CSS",
           "Jest", "Git", "Docker", "AWS"
         ].map((skill, index) => {
           // Use our skillIconMap to get the correct icon URL
@@ -167,6 +172,9 @@ export default function SkillsSection() {
                   src={iconUrl} 
                   alt={`${skill} icon`} 
                   className="w-5 h-5 object-contain"
+                  onError={(e) => {
+                    e.currentTarget.src = "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg";
+                  }}
                 />
               )}
               <span>{skill}</span>
