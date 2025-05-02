@@ -35,6 +35,27 @@ const skillGroups = [
   },
 ];
 
+// Map of skill names to their icon URLs
+const skillIconMap = {
+  "JavaScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  "TypeScript": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+  "React": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+  "Next.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+  "Node.js": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+  "Express": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+  "MongoDB": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+  "PostgreSQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+  "GraphQL": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
+  "Redux": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+  "Tailwind": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg",
+  "Jest": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg",
+  "Git": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+  "Docker": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+  "AWS": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
+  "CI/CD": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg",
+  "REST API": "https://img.icons8.com/nolan/64/api-settings.png",
+};
+
 export default function SkillsSection() {
   return (
     <SectionWrapper id="skills">
@@ -128,16 +149,8 @@ export default function SkillsSection() {
           "MongoDB", "PostgreSQL", "GraphQL", "REST API", "Redux", "Tailwind",
           "Jest", "Git", "Docker", "AWS"
         ].map((skill, index) => {
-          // Find the matching skill in the skillGroups to get its icon
-          let icon = "";
-          for (const group of skillGroups) {
-            const matchingSkill = group.skills.find(s => s.name.toLowerCase() === skill.toLowerCase() || 
-                                                       skill.toLowerCase().includes(s.name.toLowerCase()));
-            if (matchingSkill) {
-              icon = matchingSkill.icon;
-              break;
-            }
-          }
+          // Use our skillIconMap to get the correct icon URL
+          const iconUrl = skillIconMap[skill] || "";
 
           return (
             <motion.div
@@ -149,9 +162,9 @@ export default function SkillsSection() {
               viewport={{ once: true }}
               whileHover={{ scale: 1.05 }}
             >
-              {icon && (
+              {iconUrl && (
                 <img 
-                  src={icon} 
+                  src={iconUrl} 
                   alt={`${skill} icon`} 
                   className="w-5 h-5 object-contain"
                 />
