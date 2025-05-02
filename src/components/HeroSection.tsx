@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { TypeAnimation } from "react-type-animation";
 import { Button } from "./ui/button";
-import { ArrowDown, Download, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Download, Github, Linkedin, Mail, Code } from "lucide-react";
 
 export default function HeroSection() {
   return (
@@ -103,6 +103,15 @@ export default function HeroSection() {
               aria-label="Email"
             >
               <Mail size={24} />
+            </a>
+            <a
+              href="https://leetcode.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+              aria-label="LeetCode"
+            >
+              <Code size={24} />
             </a>
           </motion.div>
         </div>

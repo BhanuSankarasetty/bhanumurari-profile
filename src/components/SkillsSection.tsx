@@ -6,31 +6,31 @@ const skillGroups = [
   {
     name: "Frontend Development",
     skills: [
-      { name: "React.js", proficiency: 90 },
-      { name: "TypeScript", proficiency: 85 },
-      { name: "Next.js", proficiency: 80 },
-      { name: "Tailwind CSS", proficiency: 95 },
-      { name: "Redux", proficiency: 75 },
+      { name: "React.js", proficiency: 90, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "TypeScript", proficiency: 85, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
+      { name: "Next.js", proficiency: 80, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
+      { name: "Tailwind CSS", proficiency: 95, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" },
+      { name: "Redux", proficiency: 75, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" },
     ],
   },
   {
     name: "Backend Development",
     skills: [
-      { name: "Node.js", proficiency: 85 },
-      { name: "Express", proficiency: 80 },
-      { name: "MongoDB", proficiency: 75 },
-      { name: "PostgreSQL", proficiency: 70 },
-      { name: "GraphQL", proficiency: 65 },
+      { name: "Node.js", proficiency: 85, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" },
+      { name: "Express", proficiency: 80, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
+      { name: "MongoDB", proficiency: 75, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" },
+      { name: "PostgreSQL", proficiency: 70, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" },
+      { name: "GraphQL", proficiency: 65, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg" },
     ],
   },
   {
     name: "Tools & Others",
     skills: [
-      { name: "Git", proficiency: 90 },
-      { name: "Docker", proficiency: 70 },
-      { name: "AWS", proficiency: 65 },
-      { name: "Jest", proficiency: 75 },
-      { name: "CI/CD", proficiency: 80 },
+      { name: "Git", proficiency: 90, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
+      { name: "Docker", proficiency: 70, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
+      { name: "AWS", proficiency: 65, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg" },
+      { name: "Jest", proficiency: 75, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jest/jest-plain.svg" },
+      { name: "CI/CD", proficiency: 80, icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg" },
     ],
   },
 ];
@@ -85,7 +85,14 @@ export default function SkillsSection() {
                   return (
                     <div key={skill.name} className="space-y-2">
                       <div className="flex justify-between items-center">
-                        <span className="font-medium">{skill.name}</span>
+                        <div className="flex items-center gap-2">
+                          <img 
+                            src={skill.icon} 
+                            alt={`${skill.name} icon`} 
+                            className="w-6 h-6 object-contain"
+                          />
+                          <span className="font-medium">{skill.name}</span>
+                        </div>
                         <span className="text-sm text-muted-foreground">
                           {skill.proficiency}%
                         </span>
@@ -120,19 +127,39 @@ export default function SkillsSection() {
           "JavaScript", "TypeScript", "React", "Next.js", "Node.js", "Express",
           "MongoDB", "PostgreSQL", "GraphQL", "REST API", "Redux", "Tailwind",
           "Jest", "Git", "Docker", "AWS"
-        ].map((skill, index) => (
-          <motion.div
-            key={skill}
-            className="skill-badge"
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3, delay: 0.1 * index }}
-            viewport={{ once: true }}
-            whileHover={{ scale: 1.05 }}
-          >
-            {skill}
-          </motion.div>
-        ))}
+        ].map((skill, index) => {
+          // Find the matching skill in the skillGroups to get its icon
+          let icon = "";
+          for (const group of skillGroups) {
+            const matchingSkill = group.skills.find(s => s.name.toLowerCase() === skill.toLowerCase() || 
+                                                       skill.toLowerCase().includes(s.name.toLowerCase()));
+            if (matchingSkill) {
+              icon = matchingSkill.icon;
+              break;
+            }
+          }
+
+          return (
+            <motion.div
+              key={skill}
+              className="skill-badge flex items-center justify-center gap-2"
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: 0.1 * index }}
+              viewport={{ once: true }}
+              whileHover={{ scale: 1.05 }}
+            >
+              {icon && (
+                <img 
+                  src={icon} 
+                  alt={`${skill} icon`} 
+                  className="w-5 h-5 object-contain"
+                />
+              )}
+              <span>{skill}</span>
+            </motion.div>
+          );
+        })}
       </motion.div>
     </SectionWrapper>
   );
