@@ -16,7 +16,7 @@ const stats = [
   },
   {
     label: "DSA Practice",
-    value: "400+ Problems Solved",
+    value: "450+ Problems Solved",
     icon: Award,
   },
 ];
@@ -61,7 +61,7 @@ export default function AboutSection() {
             transition={{ duration: 0.5, delay: 0.4 }}
             viewport={{ once: true }}
           >
-            With a strong grasp of C++, DSA (400+ LeetCode problems), and hands-on experience in full-stack development using React.js, Node.js, and MongoDB, I’m now expanding into system design, Docker, Terraform, Jenkins, and AWS. My goal is to join a top tech company (FAANG/MNC) and contribute to scalable, intelligent, and secure digital ecosystems. When I'm not coding, you’ll find me dominating a chessboard, debating ideas, or reflecting on how tech can uplift lives in meaningful ways.
+            With a strong grasp of C++, DSA (350+ LeetCode problems), and hands-on experience in full-stack development using React.js, Node.js, and MongoDB, I’m now expanding into system design, Docker, Terraform, Jenkins, and AWS. My goal is to join a top tech company (FAANG/MNC) and contribute to scalable, intelligent, and secure digital ecosystems. When I'm not coding, you’ll find me dominating a chessboard, debating ideas, or reflecting on how tech can uplift lives in meaningful ways.
           </motion.p>
         </div>
 
