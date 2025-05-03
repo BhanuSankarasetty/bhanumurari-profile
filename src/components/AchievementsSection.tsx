@@ -11,7 +11,7 @@ import tableau from "../components/certificates/tableau.png";
 const achievements = [
   {
     id: 1,
-    title: "400+ LeetCode Problems Solved",
+    title: "350+ LeetCode Problems Solved",
     description: "Completed over 400 problems on LeetCode, demonstrating strong command of DSA and problem-solving in C++",
     date: "2025",
     icon: Trophy,
