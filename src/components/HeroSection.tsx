@@ -37,7 +37,7 @@ export default function HeroSection() {
           >
             <TypeAnimation
               sequence={[
-                "Software Developer Engineer",
+                "Software Development Engineer",
                 1000,
                 "Devops Enthusiast",
                 1000,
